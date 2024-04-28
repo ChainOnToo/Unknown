@@ -27,26 +27,6 @@
 		 
 });
  
- -- Custom file functions checker checker
- local CustomFunctionSupport = isfile and isfolder and writefile and readfile and listfiles
- local FileSupport = isfile and isfolder and writefile and readfile
- 
- -- Creates folder & files for Prefix & Plugins
- if FileSupport then
- if not isfolder('Nameless-Admin') then
- makefolder('Nameless-Admin')
- end
- 
- if not isfolder('Nameless-Admin/Plugins') then
-	 makefolder('Nameless-Admin/Plugins')
- end
- 
- if not isfile("Nameless-Admin/Prefix.txt") then
- writefile("Nameless-Admin/Prefix.txt", ';')
- else
- end
- end
- 
  -- [[ PREFIX AND OTHER STUFF. ]] -- 
  local opt = {
 	 prefix = readfile("Nameless-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
